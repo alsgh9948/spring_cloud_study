@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/alsgh9948/spring_cloud_study/tree/main/config
+          uri: https://github.com/alsgh9948/spring_cloud_study.git
 
 management:
   endpoints:

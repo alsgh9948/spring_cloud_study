@@ -1,3 +1,6 @@
+info:
+  description: "server default application.yml"
+
 test:
   text: "default"
 

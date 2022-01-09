@@ -1,3 +1,5 @@
+info:
+ description: "server develepe application.yml"
 test:
  text: "dev update"
 

@@ -1,0 +1,34 @@
+info:
+  description: "api gateway product application.yml"
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: server1
+          uri: lb://SERVER
+          predicates:
+            - Path=/server/**
+          filters:
+            - RewritePath=/server/(?<path>.*),/$\{path}
+#        - id: server2
+#          uri: http://localhost:8002
+#          predicates:
+#            - Path=/server2/**
+#          filters:
+#            - RewritePath=/server2/(?<path>.*),/$\{path}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway,refresh,env,info
+  endpoint:
+    gateway:
+
+      enabled: true
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8005/eureka/

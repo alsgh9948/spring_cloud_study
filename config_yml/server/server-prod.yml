@@ -1,3 +1,6 @@
+info:
+  description: "server product application.yml"
+
 test:
   text: "prod update"
 

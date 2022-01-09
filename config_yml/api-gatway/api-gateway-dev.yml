@@ -9,7 +9,7 @@ spring:
           args:
             retires: 3
             methods:
-              - GET∂
+              - GET
               - POST
               - PUT
               - DELETE

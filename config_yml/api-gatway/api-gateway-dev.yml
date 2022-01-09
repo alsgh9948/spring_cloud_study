@@ -8,6 +8,7 @@ spring:
         - name: Retry
           args:
             retires: 3
+            series:
             methods:
               - GET
               - POST

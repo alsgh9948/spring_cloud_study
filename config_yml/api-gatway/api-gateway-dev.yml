@@ -23,7 +23,6 @@ spring:
             - Path=/server/**
           filters:
             - RewritePath=/server/(?<path>.*),/$\{path}
-            -
 #        - id: server2
 #          uri: http://localhost:8002
 #          predicates:

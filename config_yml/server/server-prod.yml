@@ -1,2 +1,15 @@
 test:
-  text: "prod"
+  text: "prod update"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,info
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8005/eureka/

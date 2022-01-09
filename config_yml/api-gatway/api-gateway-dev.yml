@@ -2,21 +2,20 @@ info:
   description: "api gateway develepe application.yml"
 spring:
   cloud:
-    default-filters:
-      - CircuitBreaker=myCircuitBreaker
-      - name: Retry
-        args:
-          retires: 3
-          series:
-          methods:
-            - GET
-            - POST
-            - PUT
-            - DELETE
-          exceptions:
-            - java.net.ConnectException
-
     gateway:
+      default-filters:
+        - CircuitBreaker=myCircuitBreaker
+        - name: Retry
+          args:
+            retires: 3
+            series:
+            methods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            exceptions:
+              - java.net.ConnectException
       routes:
         - id: server1
           uri: lb://SERVER

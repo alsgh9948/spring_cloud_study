@@ -2,15 +2,23 @@ server:
   port: 8000
 spring:
   application:
-    name: config server
+    name: configserver
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/alsgh9948/spring_cloud_study.git
+          uri: https://github.com/alsgh9948/spring_cloud_study
+          search-paths: config_yml/*
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8005/eureka/
